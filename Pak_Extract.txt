@@ -1,0 +1,5 @@
+set unrealPakExe=$unrealPakExe$
+set extractPak=$extractPak$
+set extractPath=$extractPath$
+"%unrealPakExe%" "%extractPak%" -Extract "%extractPath%" 
+exit

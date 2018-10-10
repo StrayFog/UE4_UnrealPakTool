@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{303C0448-6B6B-4E26-8C02-C97D30A25AC3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>StrayFog_Framework_Pak</RootNamespace>
+    <AssemblyName>StrayFog_Framework_Pak</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CMDTool.cs" />
+    <Compile Include="EnumPlatform.cs" />
+    <Compile Include="Forms\WindowPlatform\WindowPackConfig.cs" />
+    <Compile Include="Forms\WindowPlatform\WindowPlatform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WindowPlatform\WindowPlatform.Designer.cs">
+      <DependentUpon>WindowPlatform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRCTool.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\BZip2\BZip2.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\BZip2\BZip2Constants.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\BZip2\BZip2Exception.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\BZip2\BZip2InputStream.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\BZip2\BZip2OutputStream.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Checksum\Adler32.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Checksum\BZip2Crc.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Checksum\Crc32.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Checksum\IChecksum.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Core\FileSystemScanner.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Core\INameTransform.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Core\IScanFilter.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Core\NameFilter.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Core\PathFilter.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Core\StreamUtils.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Core\WindowsPathUtils.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Encryption\PkzipClassic.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Encryption\ZipAESStream.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Encryption\ZipAESTransform.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\GZip\GZip.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\GZip\GZipConstants.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\GZip\GZipException.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\GZip\GzipInputStream.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\GZip\GzipOutputStream.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Lzw\LzwConstants.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Lzw\LzwException.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Lzw\LzwInputStream.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\SharpZipBaseException.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Tar\InvalidHeaderException.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Tar\TarArchive.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Tar\TarBuffer.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Tar\TarEntry.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Tar\TarException.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Tar\TarHeader.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Tar\TarInputStream.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Tar\TarOutputStream.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\Compression\Deflater.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\Compression\DeflaterConstants.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\Compression\DeflaterEngine.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\Compression\DeflaterHuffman.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\Compression\DeflaterPending.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\Compression\Inflater.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\Compression\InflaterDynHeader.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\Compression\InflaterHuffmanTree.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\Compression\PendingBuffer.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\Compression\Streams\DeflaterOutputStream.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\Compression\Streams\InflaterInputStream.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\Compression\Streams\OutputWindow.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\Compression\Streams\StreamManipulator.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\FastZip.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\IEntryFactory.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\WindowsNameTransform.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\ZipConstants.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\ZipEntry.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\ZipEntryFactory.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\ZipException.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\ZipExtraData.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\ZipFile.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\ZipHelperStream.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\ZipInputStream.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\ZipNameTransform.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\ZipOutputStream.cs" />
+    <Compile Include="MD5Tool.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resx\ResPakBat.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResPakBat.resx</DependentUpon>
+    </Compile>
+    <Compile Include="StartRisePackBuilderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartRisePackBuilderForm.Designer.cs">
+      <DependentUpon>StartRisePackBuilderForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\WindowPlatform\WindowPlatform.resx">
+      <DependentUpon>WindowPlatform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Resx\ResPakBat.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResPakBat.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartRisePackBuilderForm.resx">
+      <DependentUpon>StartRisePackBuilderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resx\Pak_Create.txt" />
+    <Content Include="Resx\Pak_Extract.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

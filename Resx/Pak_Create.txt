@@ -1,0 +1,8 @@
+set platform=$platform$
+set enginedir=$engineDir$
+set projectdir=$projectDir$
+set unrealPakExe=$unrealPakExe$
+set createPakFile=$createPakFile$
+set createPakTxt=$createFileName$
+"%unrealPakExe%" "%createPakFile%" -create="%createPakTxt%" -enginedir="%enginedir%"  -projectdir="%projectdir%" -encrypt -encryptionini -platform=%platform% -UTF8Output -multiprocess -patchpaddingalign=2048
+pause

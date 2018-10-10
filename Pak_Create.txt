@@ -1,0 +1,10 @@
+set platform=$platform$
+::set projectdir=$projectdir$
+::set enginedir=$enginedir$
+::-enginedir="%enginedir%"  -projectdir="%projectdir%"
+set unrealPakExe=$unrealPakExe$
+set createPakFile=$createPakFile$
+set createPakTxt=$createFileName$
+"%unrealPakExe%" "%createPakFile%" -create="%createPakTxt%" -encryptionini -platform=%platform% -UTF8Output - multiprocess - patchpaddingalign=2048
+ping 127.0.0.1 -n 5>nul
+exit
